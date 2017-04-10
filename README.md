@@ -1,6 +1,7 @@
 # meetup-sc-testing
 
 17 Mar 2017 Meetup
+
 This project provides a simple setup to get used with truffle testing.
 
 ## Init your work space
