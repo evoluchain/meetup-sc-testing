@@ -17,6 +17,7 @@ If you are on GNU/Linux you may need to also install "npm".
 #### `npm install -g truffle`
 
 Will install Truffle globally.
+
 You may use `sudo` depending on your system setup.
 
 #### `truffle version`
@@ -25,13 +26,15 @@ Check your Truffle version.
 
 ### `https://github.com/ethereumjs/testrpc`
 
-Will use Testrpc as a local node which will provide Ethereum blocks and accounts, and instantaneous tests responses.
+Will use Testrpc as a local node.
+
+It provides 10 accounts, and instantaneous tests responses.
 
 #### `npm install -g ethereumjs-testrpc`
 
 You may use `sudo` depending on your system setup.
 
-## check your work space
+## Check your work space
 
 ### `node --version`
 
