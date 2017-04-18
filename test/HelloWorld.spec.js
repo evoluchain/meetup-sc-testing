@@ -20,6 +20,7 @@ contract('HelloWorld - demo', function (accounts) {
             })
 
             .then(function (result) {
+                assert.equal(result.logs.length, 1, "More than 1 event")
                 assert.equal(result.logs[0].event, "Transfer", "Expected Transfer event")
                 assert.equal(result.logs[0].args.value.valueOf(), 500)
             })
@@ -34,6 +35,7 @@ contract('HelloWorld - demo', function (accounts) {
 
             .then(function (watcher) {
                 watcher.get(function(error, events){
+                    assert.equal(events.length, 1, "More than 1 event")
                     assert.equal(events[0].event, "Transfer", "Expected Transfer event")
                     assert.equal(events[0].args.value.valueOf(), 500)
                 })
