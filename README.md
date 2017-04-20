@@ -1,54 +1,59 @@
 # meetup-sc-testing
 
-17 Mar 2017 Meetup
-
 This project provides a simple setup to get used with truffle testing.
 
-## Init your work space
+## Init your workspace
 
-### `https://nodejs.org/en/`
+1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+   
+   Known working version:
 
-Go to this site and download the LTS version (so everyone will have the same version) for your OS.
+   ```
+   $ VBoxManage --version
+   5.1.6r110634
+   ```
 
-If you are on GNU/Linux you may need to also install "npm".
-`sudo apt install npm`
+1. Install [Vagrant](http://www.vagrantup.com/downloads.html)
 
-### `https://github.com/trufflesuite/truffle`
+   Known working version:
 
-#### `npm install -g truffle`
+   ```
+   $ vagrant --version
+   Vagrant 1.9.2
+   ```
 
-Will install Truffle globally.
+1. Clone this repository
 
-You may use `sudo` depending on your system setup.
+    ```
+    $ git clone && cd meetup-sc-testing
+    ```
 
-#### `truffle version`
+### Creating a Virtual Machine
 
-Check your Truffle version.
+1. Provision and configure the virtual machine with [NodeJS](nodejs.org) [Truffle](https://github.com/trufflesuite/truffle), and [EthereumJS](https://github.com/ethereumjs/testrpc)
 
-### `https://github.com/ethereumjs/testrpc`
+    ```
+    $ vagrant up
+    ```
 
-Will use Testrpc as a local node.
+### Characteristics of the Virtual Machine
 
-It provides 10 accounts, and instantaneous tests responses.
+  * **Number of CPU cores**: 2
+  * **Amount of RAM memory**: 3GB
+  * **Operating system**: Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-116-generic x86_64)
+  * **Shared folder**: the **current directory**(meetup-sc-testing) is mounted on the guest one (i.e., VM) on **/home/vagrant/workspace**
+  * **Exposed ports**:
+      - **guest**: 8545
+      - **host**: 8545
 
-#### `npm install -g ethereumjs-testrpc`
+### Connecting to the virtual machine via SSH
 
-You may use `sudo` depending on your system setup.
+    ```
+    $ vagrant ssh
+    ```
 
-## Check your work space
+### Shutting down the Virtual Machine
 
-### `node --version`
-
-Check your node install is ok.
-
-### `npm --version`
-
-Check your npm install is ok.
-
-### `testrpc`
-
-Version should be >= EthereumJS TestRPC v3.0.3
-
-### `truffle --version`
-
-Version should be >= Truffle v3.2.1
+  ```
+  $ vagrant halt
+  ```
