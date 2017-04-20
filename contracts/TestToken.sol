@@ -40,4 +40,8 @@ contract TestToken is StandardToken{
       return true;
   }
 
+  function isAlive() returns (bool success){
+    return true;
+  }
+
 }
