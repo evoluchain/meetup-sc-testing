@@ -1,8 +1,8 @@
-# meetup-sc-testing
-
-17 Mar 2017 Meetup
+# meetup-sc-testing - 20 Mar 2017
 
 This project provides a simple setup to get used with truffle testing.
+
+**For linux users =>** [Linux specific install](LINUX_SETUP.md)
 
 ## Init your work space
 
