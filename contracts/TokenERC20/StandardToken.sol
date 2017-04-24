@@ -5,6 +5,10 @@ import "./Token.sol";
 contract StandardToken is Token {
 
     function transfer(address _to, uint256 _value) returns (bool success) {
+
+    // Oups ! this function does not meet all tests expectations.
+    // Fix this one so tests succeed.
+
         balances[msg.sender] -= _value;
         //Transfer(msg.sender, _to, _value);
         return true;
