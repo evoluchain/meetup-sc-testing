@@ -2,7 +2,7 @@ pragma solidity ^0.4.8;
 
 import "./TokenERC20/StandardToken.sol";
 
-contract TestToken is StandardToken{
+contract TestToken is StandardToken {
 
   function () {
       throw;
@@ -18,7 +18,7 @@ contract TestToken is StandardToken{
       string _tokenName,
       uint8 _decimalUnits,
       string _tokenSymbol
-      ) {
+      ) public {
       balances[msg.sender] = _initialAmount;
       totalSupply = _initialAmount;
       name = _tokenName;
@@ -26,7 +26,7 @@ contract TestToken is StandardToken{
       symbol = _tokenSymbol;
   }
 
-  function approveAndCall(address _spender, uint256 _value, bytes _extraData) returns (bool success) {
+  function approveAndCall(address _spender, uint256 _value, bytes _extraData) public returns (bool success) {
       allowed[msg.sender][_spender] = _value;
       Approval(msg.sender, _spender, _value);
 
@@ -34,13 +34,13 @@ contract TestToken is StandardToken{
       return true;
   }
 
-  function mint(uint256 _value) returns (bool success) {
+  function mint(uint256 _value) public returns (bool success) {
       totalSupply += _value;
       balances[msg.sender] += _value;
       return true;
   }
 
-  function isAlive() returns (bool success){
+  function isAlive() public returns (bool success) {
     return true;
   }
 
