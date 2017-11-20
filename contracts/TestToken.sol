@@ -4,7 +4,7 @@ import "./TokenERC20/StandardToken.sol";
 
 contract TestToken is StandardToken {
 
-  function () {
+  function () public {
       throw;
   }
 
@@ -18,7 +18,8 @@ contract TestToken is StandardToken {
       string _tokenName,
       uint8 _decimalUnits,
       string _tokenSymbol
-      ) public {
+      ) public 
+      {
       balances[msg.sender] = _initialAmount;
       totalSupply = _initialAmount;
       name = _tokenName;
