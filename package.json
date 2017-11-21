@@ -6,6 +6,7 @@
     "test": "test"
   },
   "scripts": {
+    "testrpc": "truffle develop",
     "test": "truffle test"
   },
   "repository": {
@@ -23,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/evoluchain/meetup-sc-testing/issues"
   },
-  "homepage": "https://github.com/evoluchain/meetup-sc-testing#readme"
+  "homepage": "https://github.com/evoluchain/meetup-sc-testing#readme",
+  "dependencies": {
+    "truffle": "^4.0.1"
+  }
 }
